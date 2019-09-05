@@ -13,6 +13,12 @@ const StyledApp = styled.div`
       background: ${colors.isDark.background};
       color: ${colors.isDark.text};
     `}
+  /* .app-divider {
+    position: relative;
+    width: 0.25rem;
+    height: 100vh;
+    background: ${colors.isLight.border};
+  } */
 `;
 
 export default StyledApp;

@@ -17,7 +17,6 @@ function HomeContainer() {
     setLoading(false);
     getPokeList().then((res) => setPokeList(res));
   }, [url]);
-
   return pokeList.status === 200 && loading === false ? (
     <HomeComponent pokeList={pokeList} offset={offset} setOffset={setOffset} />
   ) : (

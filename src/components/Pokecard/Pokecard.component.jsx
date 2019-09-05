@@ -7,7 +7,7 @@ import Icon from '../core/Icon';
 import StyledPokecard from './Pokecard.wrapper';
 import pokeapi from '../../helpers/pokeapi';
 
-function PokeCardComponent({ url, name, isFavorite, setFavoriteItem }) {
+function PokeCardComponent({ url, name, isFavorite, setFavorite, setFighter, isFighting }) {
   const { language } = useContext(LanguageCtx);
   const { isDark } = useContext(ThemeCtx);
   const index = getIndex(url);
@@ -19,11 +19,8 @@ function PokeCardComponent({ url, name, isFavorite, setFavoriteItem }) {
           <img src={`/images/pixel/${index}.png`} alt={`pokemon-img-index${index}`} />
         </div>
         <div className="card-content__container">
-          <Icon
-            heart
-            isEmpty={!isFavorite}
-            onClick={() => setFavoriteItem(isFavorite, url, name)}
-          />
+          <Icon heart isEmpty={!isFavorite} onClick={() => setFavorite(isFavorite, url, name)} />
+          <Icon star isEmpty={!isFighting} onClick={() => setFighter(isFighting, url)} />
         </div>
       </div>
     </StyledPokecard>

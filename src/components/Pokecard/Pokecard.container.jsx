@@ -1,20 +1,25 @@
-import React, { useContext, useEffect } from 'react';
-import useToggle from '../../hooks/useToggle';
+import React, { useContext } from 'react';
 import PokecardComponent from './Pokecard.component';
-import Modal from '../Modal';
-import { DispatchFavoritesCtx } from '../../contexts/Favorites.context';
+import { FightersCtx } from '../../contexts/Fighters.context';
+import { FavoritesCtx } from '../../contexts/Favorites.context';
 import { REMOVE_FAVORITE, ADD_FAVORITE } from '../../reducers/Favorite.reducer';
+import { REMOVE_FIGHTER, ADD_FIGHTER } from '../../reducers/Fighters.reducer';
 
-function PokecardContainer({ name, url, isFavorite }) {
-  const [isModalVisible, toggleModal] = useToggle();
-  const dispatch = useContext(DispatchFavoritesCtx);
-  const setFavoriteItem = (isFavorite, url, name) => {
-    if (isFavorite) {
-      dispatch({ type: REMOVE_FAVORITE, url });
-    }
+function PokecardContainer({ name, url, isFavorite, isFighting }) {
+  const { dispatchFavs } = useContext(FavoritesCtx);
+  const { dispatchFighters } = useContext(FightersCtx);
+
+  const setFavorite = (isFavorite, url, name) => {
     if (!isFavorite) {
-      dispatch({ type: ADD_FAVORITE, url, name });
+      return dispatchFavs({ type: ADD_FAVORITE, url, name });
     }
+    return dispatchFavs({ type: REMOVE_FAVORITE, url });
+  };
+  const setFighter = (isFighting, url) => {
+    if (!isFighting) {
+      return dispatchFighters({ type: ADD_FIGHTER, url });
+    }
+    return dispatchFighters({ type: REMOVE_FIGHTER, url });
   };
   return (
     <div>
@@ -22,10 +27,10 @@ function PokecardContainer({ name, url, isFavorite }) {
         name={name}
         url={url}
         isFavorite={isFavorite}
-        toggleModal={toggleModal}
-        setFavoriteItem={setFavoriteItem}
+        isFighting={isFighting}
+        setFavorite={setFavorite}
+        setFighter={setFighter}
       />
-      {isModalVisible ? <Modal url={url} toggleModal={toggleModal} /> : null}
     </div>
   );
 }

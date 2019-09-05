@@ -5,15 +5,13 @@ import favoriteReducer from '../reducers/Favorite.reducer';
 
 export const FavoritesCtx = createContext();
 
-export const DispatchFavoritesCtx = createContext();
+// export const DispatchFavoritesCtx = createContext();
 
 export function FavoritesProvider({ children }) {
-  const [favorites, dispatch] = useLocalStorage(LOCAL_STORAGE_KEY, [], favoriteReducer);
+  const [favorites, dispatchFavs] = useLocalStorage(LOCAL_STORAGE_KEY, [], favoriteReducer);
   // console.info('favoritesContext', favorites);
   useEffect(() => {}, [favorites]);
   return (
-    <FavoritesCtx.Provider value={favorites}>
-      <DispatchFavoritesCtx.Provider value={dispatch}>{children}</DispatchFavoritesCtx.Provider>
-    </FavoritesCtx.Provider>
+    <FavoritesCtx.Provider value={{ favorites, dispatchFavs }}>{children}</FavoritesCtx.Provider>
   );
 }

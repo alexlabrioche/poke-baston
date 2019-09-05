@@ -12,6 +12,11 @@ function Navigation() {
   return (
     <StyledNav isDark={isDark}>
       <div className="app-icon">POKEBASTON</div>
+      <div className="app-checkbox">
+        <Checkbox onChange={toggleDark} isDark={isDark} checked={isDark}>
+          {darkContent[language]}
+        </Checkbox>
+      </div>
       <div className="app-select">
         <Select
           isDark={isDark}
@@ -20,11 +25,6 @@ function Navigation() {
           values={navContent}
           language={language}
         />
-      </div>
-      <div className="app-checkbox">
-        <Checkbox onChange={toggleDark} isDark={isDark} checked={isDark}>
-          {darkContent[language]}
-        </Checkbox>
       </div>
     </StyledNav>
   );

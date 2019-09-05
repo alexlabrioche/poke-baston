@@ -32,7 +32,6 @@ const StyledNav = styled.div`
   }
   .app-select {
     height: 100%;
-    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -45,6 +44,8 @@ const StyledNav = styled.div`
     align-items: flex-end;
     justify-content: flex-end;
     padding-right: 1rem;
+    font-family: ${fonts.secondary};
+    font-size: 0.8rem;
   }
 `;
 export default StyledNav;

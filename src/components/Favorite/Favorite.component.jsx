@@ -1,25 +1,37 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import Icon from '../core/Icon';
 import getFrenchName from '../../utils/getFrenchName';
 import StyledFavorite from './Favorite.wrapper.js';
 import { LanguageCtx } from '../../contexts/Language.context';
-import { DispatchFavoritesCtx } from '../../contexts/Favorites.context';
+import { FavoritesCtx } from '../../contexts/Favorites.context';
+import { FightersCtx } from '../../contexts/Fighters.context';
 import { REMOVE_FAVORITE } from '../../reducers/Favorite.reducer';
-import FadeContainer from '../Animated/Fade.container';
+import { ADD_FIGHTER, REMOVE_FIGHTER } from '../../reducers/Fighters.reducer';
 
 function Favorite({ name, url }) {
   const { language } = useContext(LanguageCtx);
-  const dispatch = useContext(DispatchFavoritesCtx);
-  const removeFavoriteItem = (url) => {
-    dispatch({ type: REMOVE_FAVORITE, url });
+  const { fighters } = useContext(FightersCtx);
+  const { dispatchFavs } = useContext(FavoritesCtx);
+  const { dispatchFighters } = useContext(FightersCtx);
+  const removeFavorite = (url) => {
+    dispatchFavs({ type: REMOVE_FAVORITE, url });
+  };
+  const handleFighter = (url) => {
+    if (fighters.includes(url)) {
+      dispatchFighters({ type: REMOVE_FIGHTER, url });
+    }
+    dispatchFighters({ type: ADD_FIGHTER, url });
   };
   return (
-    <FadeContainer>
-      <StyledFavorite onClick={() => removeFavoriteItem(url)}>
-        <Icon isSmall heart isEmpty={false} />
-        <span className="favorite-title">{language === 'ENG' ? name : getFrenchName(url)}</span>
-      </StyledFavorite>
-    </FadeContainer>
+    <StyledFavorite>
+      <div className="favorite-first__container" onClick={() => removeFavorite(url)}>
+        <Icon heart isEmpty={false} />
+        <span className="favorite-name">{language === 'ENG' ? name : getFrenchName(url)}</span>
+      </div>
+      <span className="favorite-action" onClick={() => handleFighter(url)}>
+        Baston!
+      </span>
+    </StyledFavorite>
   );
 }
 

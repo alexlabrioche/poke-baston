@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { fonts, colors } from '../../helpers/globalTheme';
 
 const StyledPokeCard = styled.div`
-  width: 15rem;
+  width: 14rem;
   height: 7rem;
   padding: 0.6rem;
 
