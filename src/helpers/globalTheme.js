@@ -1,6 +1,12 @@
 export const colors = {
   primary: '#ef072a',
   secondary: '#ffea2d',
+  gameBoy: {
+    primary: '#283593',
+    secondary: '#8B1D90',
+    background: '#BDAE58',
+    shadow: '#A0944B',
+  },
   isLight: {
     background: '#FFFDF7',
     shadow: '#adafbd',

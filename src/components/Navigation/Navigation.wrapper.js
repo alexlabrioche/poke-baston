@@ -3,14 +3,15 @@ import { fonts, colors } from '../../helpers/globalTheme';
 
 const StyledNav = styled.div`
   position: fixed;
-  background: ${colors.isLight.background};
+  background: ${colors.gameBoy.background};
   width: 100vw;
   z-index: 100;
-  height: 10vh;
+  height: 6vh;
   display: flex;
   align-items: center;
-  border-bottom: solid 0.3rem ${colors.isLight.border};
-  box-shadow: inset -2px -2px 0px 2px ${colors.isLight.shadow};
+  border-bottom: solid 0.6rem ${colors.gameBoy.secondary};
+  border-bottom: solid 0.3rem ${colors.gameBoy.primary};
+  box-shadow: inset -2px -2px 0px 2px ${colors.gameBoy.shadow};
   ${(p) =>
     p.isDark &&
     css`

@@ -7,12 +7,19 @@ import Button from '../core/Button';
 import getPower from '../../utils/getPower';
 import getStupidAnswers from '../../utils/getStupidAnswers';
 import { Grid } from '@material-ui/core';
-
-const POWER_LIMIT = 600;
+import { POWER_LIMIT } from '../../helpers/config';
+import useToggle from '../../hooks/useToggle';
+import FightResults from '../FightResults';
 
 function FightHome({ fighters }) {
+  const [seeResults, toggleResults] = useToggle();
   const power = getPower(fighters);
-  return (
+  const launchFight = () => {
+    toggleResults();
+  };
+  return seeResults ? (
+    <FightResults fighters={fighters} toggleResults={toggleResults} />
+  ) : (
     <StyledFightHome>
       <div className="progress__container">
         <Progress
@@ -34,14 +41,11 @@ function FightHome({ fighters }) {
         <Button
           isLarge
           isSuccess={fighters.length === 4 && power <= POWER_LIMIT}
-          isError={fighters.length === 4 && power > POWER_LIMIT}
-          isDisabled={fighters.length !== 4}
+          isError={power > POWER_LIMIT}
+          isDisabled={fighters.length !== 4 || power > POWER_LIMIT}
+          onClick={() => launchFight(fighters)}
         >
           {getStupidAnswers(fighters.length, power, POWER_LIMIT)}
-          {/* {fighters.length !== 4
-    ? `encore ${4 - fighters.length} pour la baston`
-    : "C'est la Bagarre !!!"}
-  {fighters.length === 4 && power > POWER_LIMIT && `t'as vu trop gros`} */}
         </Button>
       </div>
     </StyledFightHome>

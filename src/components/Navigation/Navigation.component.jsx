@@ -17,7 +17,7 @@ function Navigation() {
           {darkContent[language]}
         </Checkbox>
       </div>
-      <div className="app-select">
+      {/* <div className="app-select">
         <Select
           isDark={isDark}
           onChange={(e) => changeLanguage(e)}
@@ -25,7 +25,7 @@ function Navigation() {
           values={navContent}
           language={language}
         />
-      </div>
+      </div> */}
     </StyledNav>
   );
 }

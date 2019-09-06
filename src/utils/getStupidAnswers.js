@@ -19,7 +19,7 @@ const getStupidAnswers = (nb, power, max) => {
       if (power > max) {
         return "oulah tu t'es emballé mon grand";
       }
-      return "C'EST LA BAGARRE !!!";
+      return "C'est parti pour la castagne !!!";
     default:
       return `ajoutes des bagarreurs`;
   }
