@@ -1,6 +1,6 @@
 # 🐯 POKE-BASTON 🦆
 
-#### FRONT-END REACT PROJECT
+#### REACT PROJECT
  
   - 🎣 Hooks 
   - 🧺 Context
