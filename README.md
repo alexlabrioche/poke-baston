@@ -4,6 +4,8 @@
  
   - 🎣 Hooks 
   - 🧺 Context
+  - 📕 StoryBook
+  - 💅 Styled Components
   - 💾 Extern API
   
   Fetching the Poke-API as a data source.  
