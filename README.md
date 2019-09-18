@@ -4,7 +4,7 @@
  
   - 🎣 Hooks 
   - 🧺 Context
-  - 💾 API
+  - 💾 Extern API
   
   Fetching the Poke-API as a data source.  
   The main goal of this mini game is to choose 4 Pokemons and launch the fights against the 💻  
