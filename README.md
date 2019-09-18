@@ -18,6 +18,6 @@
 
 <p align="center">
   <br><br>
-  <img src="/public/img/git/pokebaston.gif">
+  <img src="/src/git/pokebaston.gif">
   <br><br>
 </p>
