@@ -18,6 +18,26 @@ const StyledDetails = styled.div`
   }
 `;
 
+const getStupidDetails = (int) => {
+  const percentage = int;
+  switch (true) {
+    case percentage < 40:
+      return `Cette pauvre quiche avait seulement ${percentage}% de réussir`;
+    case percentage < 50:
+      return `pas ouf... ce casseur de dents avait ${percentage}% de chance de réussir`;
+    case percentage < 60:
+      return `Baboum ce rotisseur avait ${percentage}% de réussite`;
+    case percentage < 70:
+      return `${percentage}% c'est le taux de réussite de ce tabasseur`;
+    case percentage < 75:
+      return `${percentage}% de réussite c'est le taux de réussite de cet arracheur de machoire`;
+    case percentage <= 80:
+      return `Ce castagneur fou avait ${percentage}% de réussite`;
+    default:
+      return `${percentage}%`;
+  }
+};
+
 function DetailsList({ result }) {
   const { name, move } = result;
   return (
@@ -37,9 +57,7 @@ function DetailsList({ result }) {
               {move.isSucced ? `(+${move.power})` : `(0)`}
             </span>
           </li>
-          <span className="nes-text is-disabled">
-            le taux de réussite était de {move.successRate}%
-          </span>
+          <span className="nes-text is-disabled">{getStupidDetails(move.successRate)}</span>
         </ul>
       </div>
     </StyledDetails>

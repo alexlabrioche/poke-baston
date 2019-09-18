@@ -4,28 +4,18 @@ import styled from 'styled-components';
 import { Container } from '@material-ui/core';
 
 const StyledLoader = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  .img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 30rem;
-    }
+
   }
 `;
 function Loader() {
   return (
     <StyledLoader>
-      <Container maxWidth="sm">
-        <div className="img-container">
-          <img src={`/images/misc/loader.gif`} alt={`loader`} />
-        </div>
-      </Container>
+      <Container maxWidth="sm">Ça charge mon grand...</Container>
     </StyledLoader>
   );
 }

@@ -11,12 +11,12 @@ function AppComponent() {
     <StyledApp isDark={isDark}>
       <Navigation />
       <Grid container>
-        <Grid item xs={12} sm={12} md={7}>
+        <Grid item xs={12} sm={12} md={6}>
           <Container>
             <Home />
           </Container>
         </Grid>
-        <Grid item xs={12} sm={12} md={5}>
+        <Grid item xs={12} sm={12} md={6}>
           <Container>
             <FightHome />
           </Container>
