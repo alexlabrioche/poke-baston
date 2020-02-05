@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/poke-baston/static/css/main.7ed9fd3c.chunk.css",
-    "main.js": "/poke-baston/static/js/main.064a5318.chunk.js",
-    "main.js.map": "/poke-baston/static/js/main.064a5318.chunk.js.map",
+    "main.js": "/poke-baston/static/js/main.3355eef4.chunk.js",
+    "main.js.map": "/poke-baston/static/js/main.3355eef4.chunk.js.map",
     "runtime-main.js": "/poke-baston/static/js/runtime-main.69b0c7ec.js",
     "runtime-main.js.map": "/poke-baston/static/js/runtime-main.69b0c7ec.js.map",
     "static/js/2.00a607f4.chunk.js": "/poke-baston/static/js/2.00a607f4.chunk.js",
     "static/js/2.00a607f4.chunk.js.map": "/poke-baston/static/js/2.00a607f4.chunk.js.map",
     "index.html": "/poke-baston/index.html",
-    "precache-manifest.1d1a2bcea1e0db3f6e0a59293b0b75fb.js": "/poke-baston/precache-manifest.1d1a2bcea1e0db3f6e0a59293b0b75fb.js",
+    "precache-manifest.ad33b0dd70334ac770cbe01253dcd241.js": "/poke-baston/precache-manifest.ad33b0dd70334ac770cbe01253dcd241.js",
     "service-worker.js": "/poke-baston/service-worker.js",
     "static/css/main.7ed9fd3c.chunk.css.map": "/poke-baston/static/css/main.7ed9fd3c.chunk.css.map",
     "static/js/2.00a607f4.chunk.js.LICENSE.txt": "/poke-baston/static/js/2.00a607f4.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.69b0c7ec.js",
     "static/js/2.00a607f4.chunk.js",
     "static/css/main.7ed9fd3c.chunk.css",
-    "static/js/main.064a5318.chunk.js"
+    "static/js/main.3355eef4.chunk.js"
   ]
 }

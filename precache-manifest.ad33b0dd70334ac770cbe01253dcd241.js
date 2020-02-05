@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6533181a204a2f8869d4f0ceaf4adbce",
+    "revision": "fc4f43e33865705c452bcd5d83435143",
     "url": "/poke-baston/index.html"
   },
   {
-    "revision": "01abcc1e4d363a26db77",
+    "revision": "289da8c1426477bd7fb3",
     "url": "/poke-baston/static/css/main.7ed9fd3c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/poke-baston/static/js/2.00a607f4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "01abcc1e4d363a26db77",
-    "url": "/poke-baston/static/js/main.064a5318.chunk.js"
+    "revision": "289da8c1426477bd7fb3",
+    "url": "/poke-baston/static/js/main.3355eef4.chunk.js"
   },
   {
     "revision": "a444e2389cd52eaef517",
