@@ -16,7 +16,10 @@ function PokeCardComponent({ url, name, isFavorite, setFavorite, setFighter, isF
       <span className="title">{language === 'ENG' ? name : getFrenchName(url)}</span>
       <div className="card-container">
         <div className="card-img__container">
-          <img src={`/images/pixel/${index}.png`} alt={`pokemon-img-index${index}`} />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/pixel/${index}.png`}
+            alt={`pokemon-img-index${index}`}
+          />
         </div>
         <div className="card-content__container">
           <Icon heart isEmpty={!isFavorite} onClick={() => setFavorite(isFavorite, url, name)} />
