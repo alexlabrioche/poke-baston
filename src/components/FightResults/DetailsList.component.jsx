@@ -43,7 +43,10 @@ function DetailsList({ result }) {
   return (
     <StyledDetails>
       <div className="img-container">
-        <img src={`/images/pixel/${name.pokeIndex}.png`} alt={`pokemon-${name.pokeIndex}`} />
+        <img
+          src={`${process.env.PUBLIC_URL}/images/pixel/${name.pokeIndex}.png`}
+          alt={`pokemon-${name.pokeIndex}`}
+        />
       </div>
       <div className="lists details-container">
         <ul class="nes-list is-circle">
