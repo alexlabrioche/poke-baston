@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/alexlabrioche/poke-baston/static/css/main.7ed9fd3c.chunk.css",
-    "main.js": "/alexlabrioche/poke-baston/static/js/main.032899c9.chunk.js",
-    "main.js.map": "/alexlabrioche/poke-baston/static/js/main.032899c9.chunk.js.map",
-    "runtime-main.js": "/alexlabrioche/poke-baston/static/js/runtime-main.4540469d.js",
-    "runtime-main.js.map": "/alexlabrioche/poke-baston/static/js/runtime-main.4540469d.js.map",
-    "static/js/2.c088d2e6.chunk.js": "/alexlabrioche/poke-baston/static/js/2.c088d2e6.chunk.js",
-    "static/js/2.c088d2e6.chunk.js.map": "/alexlabrioche/poke-baston/static/js/2.c088d2e6.chunk.js.map",
-    "index.html": "/alexlabrioche/poke-baston/index.html",
-    "precache-manifest.ca69391c2ad4b3b2a5a02f47d95e88da.js": "/alexlabrioche/poke-baston/precache-manifest.ca69391c2ad4b3b2a5a02f47d95e88da.js",
-    "service-worker.js": "/alexlabrioche/poke-baston/service-worker.js",
-    "static/css/main.7ed9fd3c.chunk.css.map": "/alexlabrioche/poke-baston/static/css/main.7ed9fd3c.chunk.css.map",
-    "static/js/2.c088d2e6.chunk.js.LICENSE.txt": "/alexlabrioche/poke-baston/static/js/2.c088d2e6.chunk.js.LICENSE.txt"
+    "main.css": "/poke-baston/static/css/main.7ed9fd3c.chunk.css",
+    "main.js": "/poke-baston/static/js/main.064a5318.chunk.js",
+    "main.js.map": "/poke-baston/static/js/main.064a5318.chunk.js.map",
+    "runtime-main.js": "/poke-baston/static/js/runtime-main.69b0c7ec.js",
+    "runtime-main.js.map": "/poke-baston/static/js/runtime-main.69b0c7ec.js.map",
+    "static/js/2.00a607f4.chunk.js": "/poke-baston/static/js/2.00a607f4.chunk.js",
+    "static/js/2.00a607f4.chunk.js.map": "/poke-baston/static/js/2.00a607f4.chunk.js.map",
+    "index.html": "/poke-baston/index.html",
+    "precache-manifest.1d1a2bcea1e0db3f6e0a59293b0b75fb.js": "/poke-baston/precache-manifest.1d1a2bcea1e0db3f6e0a59293b0b75fb.js",
+    "service-worker.js": "/poke-baston/service-worker.js",
+    "static/css/main.7ed9fd3c.chunk.css.map": "/poke-baston/static/css/main.7ed9fd3c.chunk.css.map",
+    "static/js/2.00a607f4.chunk.js.LICENSE.txt": "/poke-baston/static/js/2.00a607f4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4540469d.js",
-    "static/js/2.c088d2e6.chunk.js",
+    "static/js/runtime-main.69b0c7ec.js",
+    "static/js/2.00a607f4.chunk.js",
     "static/css/main.7ed9fd3c.chunk.css",
-    "static/js/main.032899c9.chunk.js"
+    "static/js/main.064a5318.chunk.js"
   ]
 }
